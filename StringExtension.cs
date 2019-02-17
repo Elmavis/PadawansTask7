@@ -20,6 +20,10 @@ namespace PadawansTask7
                 throw new ArgumentNullException();
             if (array.Length == 0)
                 throw new ArgumentException();
+            foreach (string str in array)
+                if (str == null)
+                    throw new ArgumentNullException();
+
             Array.Sort(array, new Comp());
         }
     }
